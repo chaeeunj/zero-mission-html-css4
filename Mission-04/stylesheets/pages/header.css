@@ -1,1 +1,92 @@
 /* 헤더 */
+body {
+  margin: 0;
+}
+
+.header {
+  width: 1920px;
+  height: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* login-bar */
+
+.login-bar {
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  background-color: var(--color-gray-100);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.login-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2px;
+}
+
+.login-bar ul li {
+  margin-right: 8px;
+}
+
+.login-bar li:nth-child(1) {
+  order: 3;
+  margin-left: 736px;
+}
+
+.login-bar li:nth-child(2) {
+  order: 4;
+}
+
+.login-bar li:nth-child(3) {
+  order: 5;
+  margin-right: 90px;
+}
+
+.login-bar li:nth-child(4) {
+  order: 1;
+}
+
+.login-bar li:nth-child(5) {
+  order: 2;
+}
+
+/* headerinner */
+
+.headerinner {
+  position: absolute;
+  top: 68px;
+  display: grid;
+}
+
+.logo {
+  width: 176px;
+  height: 40px;
+  background-image: url('../../assets/logo/logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo h1 {
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* nav */
+
+.nav {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-black);
+}
