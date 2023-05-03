@@ -82,6 +82,7 @@ ul {
   grid-area: logo;
   position: relative;
   top: 34px;
+  left: 20px;
   width: 176px;
   height: 40px;
   background-image: url('../../assets/logo/logo.svg');
@@ -123,19 +124,19 @@ ul {
 
 .search-bar {
   grid-area: search;
-  position: relative;
-  top: 34px;
-  height: 40px;
   display: flex;
   width: 514px;
+  position: relative;
+  top: 34px;
+  left: 30px;
+  height: 40px;
   border: 1px solid var(--color-blue-600);
 }
 
 .search-divide {
   position: relative;
   display: flex;
-
-  border: 1px solid var(--color-gray-100);
+  border-right: 1px solid var(--color-gray-100);
 }
 
 select::-ms-expand {
@@ -145,7 +146,7 @@ select::-ms-expand {
 .search-divide select {
   appearance: none;
   width: 135px;
-  height: 40px;
+  height: calc(40px - calc(0.8px * 2));
   font-size: 12px;
   font-weight: 400;
   border: none;
@@ -167,11 +168,14 @@ select::-ms-expand {
   font-weight: 400;
   color: var(--color-gray-600);
   border: none;
+  margin-right: ;
 }
 
 .search-bar .search-btn {
-  width: 40px;
-  height: 40px;
+  position: relative;
+  right: -15px;
+  width: calc(40px - calc(6px * 2));
+  height: calc(40px - calc(1px * 2));
   background-color: var(--color-white);
   background-repeat: no-repeat;
   background-position: center;
@@ -179,6 +183,8 @@ select::-ms-expand {
 }
 
 .voice-search {
+  position: absolute;
+  left: 5px;
   background-image: url('../../assets/icon/mic.svg');
 }
 
@@ -192,11 +198,11 @@ select::-ms-expand {
   grid-area: myCoupang;
   position: relative;
   top: 29px;
-  left: 22px;
+  left: 45px;
 }
 
 .myCoupang button {
-  width: 60px;
+  width: 70px;
   height: 58px;
   display: flex;
   flex-direction: column;
@@ -218,7 +224,9 @@ select::-ms-expand {
 }
 
 .myCoupang ul {
-  /* width: 100px;
+  /* position: relative;
+  z-index: 10;
+  width: 100px;
   height: 135px;
   border: 1px solid var(--color-gray-300);
   display: flex;
@@ -247,7 +255,7 @@ select::-ms-expand {
   grid-area: cart;
   position: relative;
   top: 29px;
-  left: 2px;
+  left: 23px;
 }
 
 .cart button {
@@ -301,7 +309,7 @@ select::-ms-expand {
   grid-area: nav;
   position: relative;
   top: 10px;
-  left: -45px;
+  left: -27px;
 
   font-size: 12px;
   font-weight: 400;
