@@ -223,31 +223,57 @@ select::-ms-expand {
   background-position: center;
 }
 
-.myCoupang ul {
-  /* position: relative;
-  z-index: 10;
-  width: 100px;
-  height: 135px;
-  border: 1px solid var(--color-gray-300);
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
+.myCoupang-hidden {
   display: none;
-}
-
-.myCoupang li {
+  position: relative;
+  left: -12px;
+  z-index: 1;
+  width: 92px;
+  height: 137;
+  padding: 38px 21px 24px 20px;
   font-size: 12px;
   font-weight: 400;
   color: var(--color-black);
+  text-align: center;
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-white);
 }
 
-/* .myCoupang:active,
-.myCoupang:hover,
-.myCoupang:focus {
-  .is--active {
+.myCoupang-hidden::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 5px 9px 6.5px;
+  border-color: var(--color-white) transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -7px;
+  left: 41px;
+}
+
+.myCoupang-hidden:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 5px 9px 6.5px;
+  border-color: var(--color-gray-300) transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -9px;
+  left: 41px;
+}
+
+.is--active {
+  .myCoupang-hidden {
     display: block;
   }
-} */
+}
+
+.myCoupang li {
+  margin-bottom: 20px;
+}
 
 /* .search-bar .cart */
 
@@ -296,20 +322,62 @@ select::-ms-expand {
   cursor: pointer;
 }
 
-.cart .cart--empty {
+.cart-hidden {
   display: none;
+  position: relative;
+  left: -245px;
+  top: 10px;
+  width: 292px;
+  z-index: 1;
+  height: 99px;
+  border: 1px solid var(--color-gray-300);
+  padding: 40px 46px 36px 47px;
   font-size: 14px;
   font-weight: 400;
+  text-align: center;
   color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.cart-hidden::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 5px 9px 6.5px;
+  border-color: var(--color-white) transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -7px;
+  left: 268px;
+}
+
+.cart-hidden::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 5px 9px 6.5px;
+  border-color: var(--color-gray-300) transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -9px;
+  left: 268px;
+}
+
+.cart--empty {
+  .cart-hidden {
+    display: block;
+  }
 }
 
 /* nav */
 
 .nav {
   grid-area: nav;
-  position: relative;
-  top: 10px;
-  left: -27px;
+  position: fixed;
+  top: 107px;
+  left: 342px;
 
   font-size: 12px;
   font-weight: 400;
